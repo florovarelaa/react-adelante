@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './Navbar.css';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -15,11 +14,37 @@ const Header = styled.header`
     width: 100%;
 `;
 
-const ItemsContainer = styled.div`
+const ItemsNavigation = styled.div`
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+`;
+
+const ItemsNavigationContainer = styled.div`
     align-items: center;
     display: flex;
+    font-size: 2vw;
     height: 100%;
     width: 100%;
+`;
+
+const ItemsNavigationList = styled.ul`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    a {
+        color: #f0f0f0;
+        font-family: 'Dancing Script', cursive;
+        text-decoration: none;
+        padding: 0 1rem;
+    }
+
+    a:hover {
+        color: #878787;
+    }
 `;
 
 const HeaderWrapper = styled.div`
@@ -31,13 +56,13 @@ function Navbar (props) {
     return (
         <HeaderWrapper>
             <Header>
-                <ItemsContainer>
-                    <div className="toolbar-navigation-items">
-                        <ul>
+                <ItemsNavigationContainer>
+                    <ItemsNavigation>
+                        <ItemsNavigationList>
                             {props.children}
-                        </ul>
-                    </div>
-                </ItemsContainer>
+                        </ItemsNavigationList>
+                    </ItemsNavigation>
+                </ItemsNavigationContainer>
             </Header>
         </HeaderWrapper>
     )
