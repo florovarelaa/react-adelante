@@ -14,16 +14,22 @@ const Header = styled.header`
     width: 100%;
 `;
 
-const ItemsNavigation = styled.div`
+const HeaderWrapper = styled.div`
+    height: 30%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 `;
 
-const ItemsNavigationContainer = styled.div`
+const ItemsNavigation = styled.div`
+    justify-self: flex-end;
+    margin-left: auto
+    margin-right: 5%;
+    position: relative;
+`;
+
+const NavigationContainer = styled.div`
     align-items: center;
     display: flex;
-    font-size: 2vw;
+    font-size: 1rem;
     height: 100%;
     width: 100%;
 `;
@@ -39,6 +45,7 @@ const ItemsNavigationList = styled.ul`
         color: #f0f0f0;
         font-family: 'Dancing Script', cursive;
         text-decoration: none;
+        text-transform: capitalize;
         padding: 0 1rem;
     }
 
@@ -47,22 +54,35 @@ const ItemsNavigationList = styled.ul`
     }
 `;
 
-const HeaderWrapper = styled.div`
-    height: 30%;
-    position: relative;
+const Logo = styled.div`
+    height: 80%;
+    width: auto;
+
+    img {
+        width: auto;
+        height: 90%;
+        justify-self: left;
+    }
 `;
 
 function Navbar (props) {
     return (
         <HeaderWrapper>
             <Header>
-                <ItemsNavigationContainer>
+                <NavigationContainer>
+                    <Logo>
+                        <img src={props.logo} alt="Can't load Logo"/>
+                    </Logo>
                     <ItemsNavigation>
                         <ItemsNavigationList>
-                            {props.children}
+                            {props.sections.map( (item, index) => 
+                                <a key={index} href={`${item.toLowerCase}`}>
+                                    {item}
+                                </a>
+                            )}
                         </ItemsNavigationList>
                     </ItemsNavigation>
-                </ItemsNavigationContainer>
+                </NavigationContainer>
             </Header>
         </HeaderWrapper>
     )
