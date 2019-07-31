@@ -4,6 +4,9 @@ import logoNavbar from './logoNavbar.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import styled from 'styled-components';
 
+const MainContainer = styled.div`
+`;
+
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
@@ -16,23 +19,19 @@ const Section = styled.section`
   background: ${props => props.background};
 `;
 
-class  MainContainer extends Component {
+const SectionContainer = styled.div`
+  margin-top: 66px;
+`;
+
+class  Main extends Component {
   state = {
     sections: ['quienes', 'que', 'donde', 'encuentro', 'campaña', 'sonrisas', 'cumpleaños', 'voluntarios']
   }
-
   render () {
       return (
-        <div className="App">
-          <Navbar logo={logoNavbar} sections={this.state.sections}>
-            {/* {this.state.sections}
-            {this.state.sections.map( e => 
-              <a href={e.toLowerCase}>
-                {e}
-              </a>
-            )} */}
-          </Navbar>
-          <div>
+        <MainContainer>
+          <Navbar logo={logoNavbar} sections={this.state.sections} />
+          <SectionContainer>
             <Section background="#e8f229">
               <Title color="#20db33">
                 ¿Quienes Somos?
@@ -73,10 +72,10 @@ class  MainContainer extends Component {
                 Voluntarios
               </Title>
             </Section>
-          </div>
-      </div>
+          </SectionContainer>
+        </MainContainer>
     );
   }
 }
 
-export default MainContainer;
+export default Main;

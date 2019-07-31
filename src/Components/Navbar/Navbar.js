@@ -1,22 +1,17 @@
 import React from 'react';
 
+import HamburguerMenu from '../HamburguerMenu/HamburguerMenu';
 import styled from 'styled-components';
 
 const Header = styled.header`
     background: #000000;
     display: flex;
-    height: 56px;
+    height: 66px;
     justify-content: space-around;
     left: 0;
-    padding: 1%;
     position: fixed;
     top: 0;
     width: 100%;
-`;
-
-const HeaderWrapper = styled.div`
-    height: 30%;
-    position: relative;
 `;
 
 const ItemsNavigation = styled.div`
@@ -67,9 +62,9 @@ const Logo = styled.div`
 
 function Navbar (props) {
     return (
-        <HeaderWrapper>
             <Header>
                 <NavigationContainer>
+                    <HamburguerMenu />
                     <Logo>
                         <img src={props.logo} alt="Can't load Logo"/>
                     </Logo>
@@ -84,7 +79,6 @@ function Navbar (props) {
                     </ItemsNavigation>
                 </NavigationContainer>
             </Header>
-        </HeaderWrapper>
     )
 };
 

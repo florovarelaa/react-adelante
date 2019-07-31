@@ -1,0 +1,40 @@
+import React from 'react';
+
+import styled from 'styled-components';
+
+const HamburguerButton = styled.button`
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    justify-content: space-around;
+    margin: 1rem;
+    min-width: 32px;
+    padding: 0;
+    width: 32px;
+
+    :focus {
+        outline: none;
+    }
+`;
+
+const HamburguerButtonLine = styled.div`
+    background: white;
+    height: 2px;
+    width: 30px;
+`;
+
+function HamburguerMenu (props) {
+    return (
+        <HamburguerButton>
+            <HamburguerButtonLine />
+            <HamburguerButtonLine />
+            <HamburguerButtonLine />
+        </HamburguerButton>
+    );
+}
+
+export default HamburguerMenu;
