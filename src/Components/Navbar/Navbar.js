@@ -38,12 +38,16 @@ const ItemsNavigationList = styled.ul`
         font-family: 'Dancing Script', cursive;
         text-decoration: none;
         text-transform: capitalize;
-        padding: 0 1rem;
     }
 
     a:hover {
         color: #878787;
     }
+    
+    li {
+        margin: 0 1rem;
+    }
+
 `;
 
 const NavigationContainer = styled.div`
@@ -62,10 +66,12 @@ function Navbar (props) {
                     <Logo logo={props.logo} />
                     <ItemsNavigation>
                         <ItemsNavigationList>
-                            {props.sections.map( (item, index) => 
-                                <a key={index} href={`${item.toLowerCase}`}>
-                                    {item}
-                                </a>
+                            {props.sections.map( (item, index) =>
+                                <li>
+                                    <a key={index} href={`${item.toLowerCase}`}>
+                                        {item}
+                                    </a>
+                                </li>
                             )}
                         </ItemsNavigationList>
                     </ItemsNavigation>
