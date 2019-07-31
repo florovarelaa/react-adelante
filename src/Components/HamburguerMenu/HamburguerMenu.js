@@ -19,6 +19,10 @@ const HamburguerButton = styled.button`
     :focus {
         outline: none;
     }
+
+    @media screen and (min-width: 880px) {
+        display: none;
+    }
 `;
 
 const HamburguerButtonLine = styled.div`

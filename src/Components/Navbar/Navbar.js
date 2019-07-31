@@ -17,9 +17,13 @@ const Header = styled.header`
 
 const ItemsNavigation = styled.div`
     justify-self: flex-end;
-    margin-left: auto
+    margin-left: auto;
     margin-right: 1rem;
     position: relative;
+
+    @media screen and (max-width: 880px) {
+        display: none;
+    }
 `;
 
 const ItemsNavigationList = styled.ul`
