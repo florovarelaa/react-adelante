@@ -1,6 +1,7 @@
 import React from 'react';
 
 import HamburguerMenu from '../HamburguerMenu/HamburguerMenu';
+import Logo from '../Logo/Logo';
 import styled from 'styled-components';
 
 const Header = styled.header`
@@ -49,25 +50,12 @@ const ItemsNavigationList = styled.ul`
     }
 `;
 
-const Logo = styled.div`
-    height: 80%;
-    width: auto;
-
-    img {
-        width: auto;
-        height: 90%;
-        justify-self: left;
-    }
-`;
-
 function Navbar (props) {
     return (
             <Header>
                 <NavigationContainer>
                     <HamburguerMenu />
-                    <Logo>
-                        <img src={props.logo} alt="Can't load Logo"/>
-                    </Logo>
+                    <Logo logo={props.logo} />
                     <ItemsNavigation>
                         <ItemsNavigationList>
                             {props.sections.map( (item, index) => 

@@ -14,8 +14,8 @@ const HamburguerButton = styled.button`
     margin: 1rem;
     min-width: 32px;
     padding: 0;
-    width: 32px;
-
+    width: 28px;
+    
     :focus {
         outline: none;
     }
