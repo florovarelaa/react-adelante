@@ -18,16 +18,8 @@ const Header = styled.header`
 const ItemsNavigation = styled.div`
     justify-self: flex-end;
     margin-left: auto
-    margin-right: 5%;
+    margin-right: 1rem;
     position: relative;
-`;
-
-const NavigationContainer = styled.div`
-    align-items: center;
-    display: flex;
-    font-size: 1rem;
-    height: 100%;
-    width: 100%;
 `;
 
 const ItemsNavigationList = styled.ul`
@@ -48,6 +40,14 @@ const ItemsNavigationList = styled.ul`
     a:hover {
         color: #878787;
     }
+`;
+
+const NavigationContainer = styled.div`
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
 `;
 
 function Navbar (props) {

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const LogoContainer = styled.div`
     height: 80%;
+    margin: 0 0.5rem;
     width: auto;
 
     img {
