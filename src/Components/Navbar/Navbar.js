@@ -43,11 +43,10 @@ const ItemsNavigationList = styled.ul`
     a:hover {
         color: #878787;
     }
-    
+
     li {
         margin: 0 1rem;
     }
-
 `;
 
 const NavigationContainer = styled.div`

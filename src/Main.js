@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logoNavbar from './logoNavbar.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import styled from 'styled-components';
@@ -31,6 +32,7 @@ class  Main extends Component {
       return (
         <MainContainer>
           <Navbar logo={logoNavbar} sections={this.state.sections} />
+          <LeftPanel sections={this.state.sections}/>
           <SectionContainer>
             <Section background="#e8f229">
               <Title color="#20db33">
