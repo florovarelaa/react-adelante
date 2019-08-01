@@ -11,6 +11,33 @@ const Nav = styled.nav`
     position: fixed;
     top: 0;
     width: 40%;
+    z-index: 200;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0 0 0 3rem;
+        margin: 0;
+    }
+
+    li {
+        margin: 1.5rem 0;
+    }
+
+    a {
+        color: #000000;
+        font-size: 1.1rem;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    a:hover,
+    a:active {
+        color: #878787;
+    }
 `;
 
 const LeftPanel = props => (
