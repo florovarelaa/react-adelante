@@ -27,14 +27,42 @@ const SectionContainer = styled.div`
 
 class  Main extends Component {
   state = {
-    sections: ['quienes', 'que', 'donde', 'encuentro', 'campaña', 'sonrisas', 'cumpleaños', 'voluntarios']
+    sections: ['quienes', 'que', 'donde', 'encuentro', 'campaña', 'sonrisas', 'cumpleaños', 'voluntarios'],
+    leftPanelOpen: false,
   }
+
+  //if backdrop is clicked, left panel is always closed.
+  backdropClickHandler = () => {
+    this.setState({leftPanelOpen: false})
+  }
+
+  //function that will be passed to the hamburguer menu.
+  leftPanelToggleClickHandler = () => {
+    this.setState( prevState => {
+      return { 
+        leftPanelOpen: !prevState.leftPanelOpen 
+      };
+    });
+  };
+
   render () {
+      //backdrop is a best practice name for modals/panels background.
+      let backdrop;
+
+      //if left panel is opened, it renders the backdrop, else it does not.
+      if (this.state.leftPanelOpen) {
+        backdrop = <Backdrop click={this.backdropClickHandler}/>;
+      }
+
       return (
         <MainContainer>
-          <Navbar logo={logoNavbar} sections={this.state.sections} />
-          <LeftPanel sections={this.state.sections}/>
-          <Backdrop />
+          <Navbar 
+            logo={logoNavbar}
+            sections={this.state.sections}
+            leftPanelClickHandler={this.leftPanelToggleClickHandler}
+          />
+          <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
+          {backdrop}
           <SectionContainer>
             <Section background="#e8f229">
               <Title color="#20db33">

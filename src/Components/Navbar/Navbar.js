@@ -61,13 +61,13 @@ function Navbar (props) {
     return (
             <Header>
                 <NavigationContainer>
-                    <HamburguerMenu />
+                    <HamburguerMenu click={props.leftPanelClickHandler}/>
                     <Logo logo={props.logo} />
                     <ItemsNavigation>
                         <ItemsNavigationList>
                             {props.sections.map( (item, index) =>
-                                <li>
-                                    <a key={index} href={`${item.toLowerCase}`}>
+                                <li key={index}>
+                                    <a href={`${item.toLowerCase}`}>
                                         {item}
                                     </a>
                                 </li>

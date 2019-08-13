@@ -31,9 +31,9 @@ const HamburguerButtonLine = styled.div`
     width: 30px;
 `;
 
-function HamburguerMenu (props) {
+const HamburguerMenu = props => {
     return (
-        <HamburguerButton>
+        <HamburguerButton onClick={props.click}>
             <HamburguerButtonLine />
             <HamburguerButtonLine />
             <HamburguerButtonLine />
