@@ -7,25 +7,32 @@ const VideoContainer = styled.div`
         position: absolute;
         top: 0;
         bottom: 0;
-        width: 100%;
-        height: 100%; 
+        height: 100vh; 
         overflow: hidden;
+        width: 100vw;
 
         video {
             /* Make video to at least 100% wide and tall */
-            min-width: 100%; 
             min-height: 100%; 
+            min-width: 100%; 
             
             /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-            width: auto;
             height: auto;
+            width: auto;
             
             /* Center the video */
+            left: 50%;
             position: absolute;
             top: 50%;
-            left: 50%;
             transform: translate(-50%,-50%);
           }
+`;
+
+const VideoContentContainer = styled.div`
+    background: transparent;
+    height: 100%;
+    position: relative;
+    width: 100%;
 `;
 
 class BackgroundVideo extends Component {
@@ -39,13 +46,17 @@ class BackgroundVideo extends Component {
 
     render () {
         return (
-            <VideoContainer>
-                <video id="background-video" loop autoPlay muted>
-                    <source src={this.state.videoURL} type="video/mp4" />
-                    <source src={this.state.videoURL} type="video/ogg" />
-                    Your browser does not support the video tag.
-                </video>
-            </VideoContainer>
+            <div style={{ height: '100vh', width: '100vw'}}>
+                <VideoContainer>
+                    <video id="background-video" loop autoPlay muted>
+                        <source src={this.state.videoURL} type="video/mp4" />
+                        <source src={this.state.videoURL} type="video/ogg" />
+                        Your browser does not support the video tag.
+                    </video>
+                </VideoContainer>
+                <VideoContentContainer>
+                </VideoContentContainer>
+            </div>
         )
     }
 };

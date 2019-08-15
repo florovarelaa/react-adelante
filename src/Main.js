@@ -24,7 +24,6 @@ const Section = styled.section`
 `;
 
 const SectionContainer = styled.div`
-  margin-top: 66px;
 `;
 
 class  Main extends Component {
@@ -67,7 +66,7 @@ class  Main extends Component {
           {backdrop}
           <SectionContainer>
             <BackgroundVideo />
-            <Quienes styles={{height: '100%', width:'100%'}}/>
+            <Quienes id='quienes' styles={{height: '100%', width:'100%'}}/>
             <Section background="#e8f229">
               <Title color="#20db33">
                 ¿Quienes Somos?
@@ -83,31 +82,6 @@ class  Main extends Component {
                 Donde Trabajamos
               </Title>
             </Section>
-            {/*<Section background="#e8f229">
-              <Title color="#db231f">
-                Encuentro Anual
-              </Title>
-            </Section>
-            <Section background="#20db33">
-              <Title color="#e8f229">
-                Campaña
-              </Title>
-            </Section>
-            <Section background="#db231f">
-              <Title color="#20db33">
-                Sonrisas
-              </Title>
-            </Section>
-            <Section background="#e8f229">
-              <Title color="#20db33">
-                Cumpleaños
-              </Title>
-            </Section>
-            <Section background="#20db33">
-              <Title color="#db231f">
-                Voluntarios
-              </Title>
-            </Section> */}
           </SectionContainer>
         </MainContainer>
     );
