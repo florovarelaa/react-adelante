@@ -13,7 +13,7 @@ const Nav = styled.nav`
     transform: ${props => (props.show ? 'translateX(0%)' : 'translateX(-100%)' )};
     transition: transform 0.3s ease-out;
     width: 40%;
-    z-index: 200;
+    z-index: 1200;
 
     a {
         color: #000000;

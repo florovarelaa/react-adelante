@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 import styled from 'styled-components';
 
 const Header = styled.header`
-    background: #000000;
+    background: #0000007A;
     display: flex;
     height: 66px;
     justify-content: space-around;
@@ -13,6 +13,7 @@ const Header = styled.header`
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 `;
 
 const ItemsNavigation = styled.div`

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import Backdrop from './Components/Backdrop/Backdrop';
+import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logoNavbar from './logoNavbar.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import styled from 'styled-components';
+import Quienes from './Components/Quienes/Quienes';
 
 const MainContainer = styled.div`
 `;
@@ -64,6 +66,8 @@ class  Main extends Component {
           <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
           {backdrop}
           <SectionContainer>
+            <BackgroundVideo />
+            <Quienes styles={{height: '100%', width:'100%'}}/>
             <Section background="#e8f229">
               <Title color="#20db33">
                 ¿Quienes Somos?
@@ -79,7 +83,7 @@ class  Main extends Component {
                 Donde Trabajamos
               </Title>
             </Section>
-            <Section background="#e8f229">
+            {/*<Section background="#e8f229">
               <Title color="#db231f">
                 Encuentro Anual
               </Title>
@@ -103,7 +107,7 @@ class  Main extends Component {
               <Title color="#db231f">
                 Voluntarios
               </Title>
-            </Section>
+            </Section> */}
           </SectionContainer>
         </MainContainer>
     );
