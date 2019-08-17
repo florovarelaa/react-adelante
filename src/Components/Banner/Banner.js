@@ -39,10 +39,10 @@ class Banner extends Component {
         return (
             <ContentContainer>
                 <BannerHeader>
-                    Jóvenes Voluntarios
+                    {this.props.header}
                 </BannerHeader>
                 <BannerContent>
-                    Colaboración, Contención, Escucha y Esperanza
+                    {this.props.content}
                 </BannerContent>
             </ContentContainer>
         )

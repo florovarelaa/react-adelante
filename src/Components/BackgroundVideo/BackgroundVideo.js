@@ -56,7 +56,10 @@ class BackgroundVideo extends Component {
                     </video>
                 </VideoContainer>
                 <VideoContentContainer>
-                    <Banner />
+                    <Banner 
+                        header='Jóvenes Voluntarios'
+                        content='Colaboración, Contención, Escucha y Esperanza'
+                    />
                 </VideoContentContainer>
             </div>
         )
