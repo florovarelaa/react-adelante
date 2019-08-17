@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Banner from '../Banner/Banner';
 import styled from 'styled-components';
 import Video from '../../Assets/Videos/BackgroundVideo1.mp4';
 
@@ -29,7 +30,7 @@ const VideoContainer = styled.div`
 `;
 
 const VideoContentContainer = styled.div`
-    background: transparent;
+    background: rgba(0, 0, 0, .2);
     height: 100%;
     position: relative;
     width: 100%;
@@ -55,6 +56,7 @@ class BackgroundVideo extends Component {
                     </video>
                 </VideoContainer>
                 <VideoContentContainer>
+                    <Banner />
                 </VideoContentContainer>
             </div>
         )
