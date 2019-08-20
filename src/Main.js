@@ -5,8 +5,9 @@ import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logoNavbar from './logoNavbar.jpg';
 import Navbar from './Components/Navbar/Navbar';
-import styled from 'styled-components';
 import Quienes from './Components/Quienes/Quienes';
+import styled from 'styled-components';
+import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 
 const MainContainer = styled.div`
 `;
@@ -57,11 +58,12 @@ class  Main extends Component {
 
       return (
         <MainContainer>
-          <Navbar 
+          <ToolbarInfo />
+          {/* <Navbar 
             logo={logoNavbar}
             sections={this.state.sections}
             leftPanelClickHandler={this.leftPanelToggleClickHandler}
-          />
+          /> */}
           <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
           {backdrop}
           <SectionContainer>

@@ -8,12 +8,13 @@ import ToolbarInfo from '../ToolbarInfo/ToolbarInfo';
 const Header = styled.header`
     background: #0000007A;
     display: flex;
-    height: 66px;
+    flex-direction: column;
+    height: 108px;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 5;
 `;
 
 const ItemsNavigation = styled.div`
@@ -53,16 +54,18 @@ const ItemsNavigationList = styled.ul`
 const NavigationContainer = styled.div`
     align-items: center;
     display: flex;
+    flex-direction: row;
     font-size: 1rem;
-    height: 100%;
+    height: 40px;
     justify-content: space-around;
     width: 100%;
 `;
 
 function Navbar (props) {
     return (
+        <div>
         <Header>
-            <ToolbarInfo />
+            {/* <ToolbarInfo /> */}
             <NavigationContainer>
                 <HamburguerMenu click={props.leftPanelClickHandler}/>
                 <Logo logo={props.logo} />
@@ -79,6 +82,7 @@ function Navbar (props) {
                 </ItemsNavigation>
             </NavigationContainer>
         </Header>
+    </div>
     )
 };
 
