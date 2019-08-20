@@ -65,7 +65,6 @@ function Navbar (props) {
     return (
         <div>
         <Header>
-            {/* <ToolbarInfo /> */}
             <NavigationContainer>
                 <HamburguerMenu click={props.leftPanelClickHandler}/>
                 <Logo logo={props.logo} />
