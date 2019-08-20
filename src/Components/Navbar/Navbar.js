@@ -3,12 +3,12 @@ import React from 'react';
 import HamburguerMenu from '../HamburguerMenu/HamburguerMenu';
 import Logo from '../Logo/Logo';
 import styled from 'styled-components';
+import ToolbarInfo from '../ToolbarInfo/ToolbarInfo';
 
 const Header = styled.header`
     background: #0000007A;
     display: flex;
     height: 66px;
-    justify-content: space-around;
     left: 0;
     position: fixed;
     top: 0;
@@ -36,7 +36,7 @@ const ItemsNavigationList = styled.ul`
 
     a {
         color: #f0f0f0;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Sans-serif', cursive;
         text-decoration: none;
         text-transform: capitalize;
     }
@@ -55,28 +55,30 @@ const NavigationContainer = styled.div`
     display: flex;
     font-size: 1rem;
     height: 100%;
+    justify-content: space-around;
     width: 100%;
 `;
 
 function Navbar (props) {
     return (
-            <Header>
-                <NavigationContainer>
-                    <HamburguerMenu click={props.leftPanelClickHandler}/>
-                    <Logo logo={props.logo} />
-                    <ItemsNavigation>
-                        <ItemsNavigationList>
-                            {props.sections.map( (item, index) =>
-                                <li key={index}>
-                                    <a href={`${item.toLowerCase}`}>
-                                        {item}
-                                    </a>
-                                </li>
-                            )}
-                        </ItemsNavigationList>
-                    </ItemsNavigation>
-                </NavigationContainer>
-            </Header>
+        <Header>
+            <ToolbarInfo />
+            <NavigationContainer>
+                <HamburguerMenu click={props.leftPanelClickHandler}/>
+                <Logo logo={props.logo} />
+                <ItemsNavigation>
+                    <ItemsNavigationList>
+                        {props.sections.map( (item, index) =>
+                            <li key={index}>
+                                <a href={`${item.toLowerCase}`}>
+                                    {item}
+                                </a>
+                            </li>
+                        )}
+                    </ItemsNavigationList>
+                </ItemsNavigation>
+            </NavigationContainer>
+        </Header>
     )
 };
 
