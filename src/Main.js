@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import Backdrop from './Components/Backdrop/Backdrop';
 import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
-import logoNavbar from './logoNavbar.jpg';
+import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import Quienes from './Components/Quienes/Quienes';
 import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
+import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
 
 const MainContainer = styled.div`
 `;
@@ -59,8 +60,10 @@ class  Main extends Component {
       return (
         <MainContainer>
           <ToolbarInfo />
+          <ToolbarContent 
+            logo={logo}
+          />
           {/* <Navbar 
-            logo={logoNavbar}
             sections={this.state.sections}
             leftPanelClickHandler={this.leftPanelToggleClickHandler}
           /> */}

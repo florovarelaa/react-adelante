@@ -1,7 +1,6 @@
 import React from 'react';
 
 import HamburguerMenu from '../HamburguerMenu/HamburguerMenu';
-import Logo from '../Logo/Logo';
 import styled from 'styled-components';
 import ToolbarInfo from '../ToolbarInfo/ToolbarInfo';
 
@@ -67,7 +66,6 @@ function Navbar (props) {
         <Header>
             <NavigationContainer>
                 <HamburguerMenu click={props.leftPanelClickHandler}/>
-                <Logo logo={props.logo} />
                 <ItemsNavigation>
                     <ItemsNavigationList>
                         {props.sections.map( (item, index) =>
