@@ -15,6 +15,7 @@ const BtnDonate = styled.button`
     font-family: montserrat;
     font-size: 23px;
     margin: 0;
+    outline: none;
     padding: 0;
     text-transform: capitalize;
     width: 50%;
@@ -26,6 +27,7 @@ const BtnDonate = styled.button`
 
     :hover {
         color: #00aa00;
+        cursor: pointer;
     }
 
     @media screen and (max-width: 880px) {
@@ -94,7 +96,7 @@ const ToolbarContent = (props) => {
             </LogoWrapper>
             <Slogan>
                 <div>
-                    el amor todo <br />lo transforma
+                    el amor todo lo transforma
                 </div>
             </Slogan>
             <BtnContainer>

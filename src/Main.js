@@ -5,7 +5,7 @@ import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
-import Quienes from './Components/Quienes/Quienes';
+import Section from './Components/Section/Section.js';
 import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
@@ -20,7 +20,7 @@ const Title = styled.h1`
 `;
 
 // Create a Section component that'll render a <section> tag with some styles
-const Section = styled.section`
+const Sec = styled.section`
   padding: 4em;
   background: ${props => props.background};
 `;
@@ -60,33 +60,33 @@ class  Main extends Component {
       return (
         <MainContainer>
           <ToolbarInfo />
-          <ToolbarContent 
+          <ToolbarContent
             logo={logo}
           />
-          {/* <Navbar 
+          <Navbar 
             sections={this.state.sections}
             leftPanelClickHandler={this.leftPanelToggleClickHandler}
-          /> */}
+          />
           <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
           {backdrop}
           <SectionContainer>
             <BackgroundVideo />
-            <Quienes id='quienes' styles={{height: '100%', width:'100%'}}/>
-            <Section background="#e8f229">
+            <Section id='quienes' styles={{height: '100%', width:'100%'}}/>
+            <Sec background="#e8f229">
               <Title color="#20db33">
                 ¿Quienes Somos?
               </Title>
-            </Section>
-            <Section background="#20db33">
+            </Sec>
+            <Sec background="#20db33">
               <Title color="#db231f">
                 ¿Que hacemos?
               </Title>
-            </Section>
-            <Section background="#db231f">
+            </Sec>
+            <Sec background="#db231f">
               <Title color="#e8f229">
                 Donde Trabajamos
               </Title>
-            </Section>
+            </Sec>
           </SectionContainer>
         </MainContainer>
     );

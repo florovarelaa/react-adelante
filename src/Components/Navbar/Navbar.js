@@ -2,25 +2,24 @@ import React from 'react';
 
 import HamburguerMenu from '../HamburguerMenu/HamburguerMenu';
 import styled from 'styled-components';
-import ToolbarInfo from '../ToolbarInfo/ToolbarInfo';
 
 const Header = styled.header`
     background: #0000007A;
+    border-radius: 0 0 15px 15px;
     display: flex;
     flex-direction: column;
-    height: 108px;
+    height: 50px;
     left: 0;
-    position: fixed;
+    margin-left: 10%;
+    position: sticky;
     top: 0;
-    width: 100%;
+    width: 80%;
     z-index: 5;
 `;
 
 const ItemsNavigation = styled.div`
-    justify-self: flex-end;
-    margin-left: auto;
-    margin-right: 1rem;
     position: relative;
+    width: 100%;
 
     @media screen and (max-width: 880px) {
         display: none;
@@ -32,7 +31,7 @@ const ItemsNavigationList = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     a {
         color: #f0f0f0;
@@ -44,10 +43,6 @@ const ItemsNavigationList = styled.ul`
     a:hover {
         color: #878787;
     }
-
-    li {
-        margin: 0 1rem;
-    }
 `;
 
 const NavigationContainer = styled.div`
@@ -55,14 +50,13 @@ const NavigationContainer = styled.div`
     display: flex;
     flex-direction: row;
     font-size: 1rem;
-    height: 40px;
+    height: 100%;
     justify-content: space-around;
     width: 100%;
 `;
 
 function Navbar (props) {
     return (
-        <div>
         <Header>
             <NavigationContainer>
                 <HamburguerMenu click={props.leftPanelClickHandler}/>
@@ -79,7 +73,6 @@ function Navbar (props) {
                 </ItemsNavigation>
             </NavigationContainer>
         </Header>
-    </div>
     )
 };
 

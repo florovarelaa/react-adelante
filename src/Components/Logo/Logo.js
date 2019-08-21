@@ -8,6 +8,7 @@ const LogoContainer = styled.div`
     padding: 0;
 
     img {
+        border: 2px solid black;
         border-radius: 50%;
         height: 90%;
         margin: 5% 0;
