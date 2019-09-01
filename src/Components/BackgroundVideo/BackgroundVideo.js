@@ -6,7 +6,7 @@ import Video from '../../Assets/Videos/BackgroundVideo1.mp4';
 //useful container for making a responsive video
 const VideoContainer = styled.div`
         position: absolute;
-        top: 0;
+        top: 170px;
         bottom: 0;
         height: 100vh; 
         overflow: hidden;
@@ -33,6 +33,7 @@ const VideoContentContainer = styled.div`
     background: rgba(0, 0, 0, .2);
     height: 100%;
     position: relative;
+    top: -50px;
     width: 100%;
 `;
 
@@ -47,7 +48,7 @@ class BackgroundVideo extends Component {
 
     render () {
         return (
-            <div style={{ height: '100vh', width: '100vw'}}>
+    <div style={{ height: '100vh', width: '100vw'}}>
                 <VideoContainer>
                     <video id="background-video" loop autoPlay muted>
                         <source src={this.state.videoURL} type="video/mp4" />

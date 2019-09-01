@@ -34,7 +34,7 @@ const Quien = () => {
         <Container>
             <ContentContainer>
                 <Title>
-                    Visión y Valores
+                    Quiénes Somos
                 </Title>
                 <Content>
                     Una organizacíon sin fines de Lucro, situada en Mar del Plata. Formada por Jovenes Voluntarios.

@@ -5,7 +5,7 @@ import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
-import Section from './Components/Section/Section.js';
+import Quienes from './Components/Sections/Quienes/Quienes.js';
 import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
@@ -30,7 +30,7 @@ const SectionContainer = styled.div`
 
 class  Main extends Component {
   state = {
-    sections: ['quienes', 'que', 'donde', 'encuentro', 'campaña', 'sonrisas', 'cumpleaños', 'voluntarios'],
+    sections: ['quienes somos', 'que hacemos', 'donde trabajamos', 'nuestras campañas', 'voluntarios', 'como colaborar'],
     leftPanelOpen: false,
   }
 
@@ -69,14 +69,11 @@ class  Main extends Component {
           />
           <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
           {backdrop}
+          <BackgroundVideo />
+          {/* contains all sections */}
           <SectionContainer>
-            <BackgroundVideo />
-            <Section id='quienes' styles={{height: '100%', width:'100%'}}/>
-            <Sec background="#e8f229">
-              <Title color="#20db33">
-                ¿Quienes Somos?
-              </Title>
-            </Sec>
+            <Quienes id='quienes'/>
+            
             <Sec background="#20db33">
               <Title color="#db231f">
                 ¿Que hacemos?

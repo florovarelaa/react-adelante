@@ -4,13 +4,12 @@ import Quien from './Quien';
 import styled from 'styled-components';
 
 
-//Quienes deberia ser nombrado a Section
 const Quienes = () => (
     <div>
         <Quien />
         <Parallax
             blur={0}
-            bgImage={require('../../Assets/Images/quienes_1.jpg')}
+            bgImage={require('../../../Assets/Images/quienes_1.jpg')}
             bgImageAlt="Quienes Somos"
             strength={200}
         >
