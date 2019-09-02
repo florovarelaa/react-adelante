@@ -6,7 +6,10 @@ import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import Quienes from './Components/Sections/Quienes/Quienes.js';
+import Que from './Components/Sections/Que/Que.js';
+import queImage from './Assets/Images/que_1.jpg';
 import styled from 'styled-components';
+import Section from './Components/Sections/Section';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
 
@@ -21,8 +24,9 @@ const Title = styled.h1`
 
 // Create a Section component that'll render a <section> tag with some styles
 const Sec = styled.section`
-  padding: 4em;
   background: ${props => props.background};
+  padding: 4em;
+  position: relative;
 `;
 
 const SectionContainer = styled.div`
@@ -72,8 +76,13 @@ class  Main extends Component {
           <BackgroundVideo />
           {/* contains all sections */}
           <SectionContainer>
-            <Quienes id='quienes'/>
-            
+            <Section height='110vh'>
+              <Quienes id='quienes'/>
+            </Section>
+
+            <Section height='100vh'>
+              <Que img={queImage}/>
+            </Section>
             <Sec background="#20db33">
               <Title color="#db231f">
                 ¿Que hacemos?

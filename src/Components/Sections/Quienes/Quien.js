@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    color: #000000;
     height: 60vh;
     width: 100%;
 `
@@ -21,7 +20,7 @@ const Title = styled.h1`
     font-size: 50px;
     padding: 10px 0;
     margin: 0;
-    `
+`
     
 const Content = styled.p`
     font-size: 20px;
