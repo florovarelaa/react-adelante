@@ -2,31 +2,20 @@ import React, { Component } from 'react';
 
 import Backdrop from './Components/Backdrop/Backdrop';
 import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
+import Donde from './Components/Sections/Donde/Donde';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
 import Quienes from './Components/Sections/Quienes/Quienes.js';
 import Que from './Components/Sections/Que/Que.js';
-import queImage from './Assets/Images/que_1.jpg';
+import imageQue from './Assets/Images/que_1.jpg';
+import imageDonde from './Assets/Images/donde_1.jpg';
 import styled from 'styled-components';
 import Section from './Components/Sections/Section';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
 
 const MainContainer = styled.div`
-`;
-
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: ${props => props.color};
-`;
-
-// Create a Section component that'll render a <section> tag with some styles
-const Sec = styled.section`
-  background: ${props => props.background};
-  padding: 4em;
-  position: relative;
 `;
 
 const SectionContainer = styled.div`
@@ -81,18 +70,24 @@ class  Main extends Component {
             </Section>
 
             <Section height='100vh'>
-              <Que img={queImage}/>
+              <Que img={imageQue}/>
             </Section>
-            <Sec background="#20db33">
-              <Title color="#db231f">
-                ¿Que hacemos?
-              </Title>
-            </Sec>
-            <Sec background="#db231f">
-              <Title color="#e8f229">
-                Donde Trabajamos
-              </Title>
-            </Sec>
+
+            <Section height='100vh'>
+              <Donde img={imageDonde}/>
+            </Section>
+            
+            <Section height='110vh'>
+              Campañas
+            </Section>
+
+            <Section height='100vh'>
+              Voluntarios
+            </Section>
+
+            <Section height='100vh'>
+              Como Colaborar
+            </Section>
           </SectionContainer>
         </MainContainer>
     );

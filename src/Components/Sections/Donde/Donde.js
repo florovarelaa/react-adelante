@@ -47,21 +47,25 @@ const Title = styled.h1`
     margin: 0;
 `
 
-const Que = props => (
+const Donde = props => (
     <Container>
+        <Content>
+            <Title>
+                Donde Trabajamos
+            </Title>
+                <p>
+                   Lunes 
+                   Martes 
+                   Miercoles
+                   Jueves
+                   Viernes
+                   Sabados
+                </p>
+        </Content>
         <ImgContainer >
             <Img src={props.img} alt='Unavailable'/>
         </ImgContainer>
-        <Content>
-            <Title>
-                Que Hacemos
-            </Title>
-                <p>
-                    Construimos Hogares.
-                    Brindamos ayuda alimentaria a menores y adultos mayores en situacion de vulnerabilidad.
-                </p>
-        </Content>
     </Container>
 );
 
-export default Que;
+export default Donde;
