@@ -15,6 +15,11 @@ const Header = styled.header`
     top: 0;
     width: 80%;
     z-index: 5;
+
+    @media screen and (max-width: 880px) {
+        left: 80%;
+        width: 50px;
+    }
 `;
 
 const ItemsNavigation = styled.div`
