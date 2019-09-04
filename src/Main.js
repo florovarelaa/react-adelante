@@ -2,18 +2,24 @@ import React, { Component } from 'react';
 
 import Backdrop from './Components/Backdrop/Backdrop';
 import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
-import Donde from './Components/Sections/Donde/Donde';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
-import Quienes from './Components/Sections/Quienes/Quienes.js';
-import Que from './Components/Sections/Que/Que.js';
+
+import imageCampanias from './Assets/Images/campañas_1.jpg'
+import imageQuienes from './Assets/Images/quienes_1.jpg';
 import imageQue from './Assets/Images/que_1.jpg';
 import imageDonde from './Assets/Images/donde_1.jpg';
-import styled from 'styled-components';
+
 import Section from './Components/Sections/Section';
+import SectionParallax from './Components/SectionParallax/SectionParallax.js';
+import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
+
+import Que from './Components/Sections/Que/Que';
+import Quienes from './Components/Sections/Quienes/Quienes'
+import Donde from './Components/Sections/Donde/Donde';
 
 const MainContainer = styled.div`
 `;
@@ -66,7 +72,9 @@ class  Main extends Component {
           {/* contains all sections */}
           <SectionContainer>
             <Section height='110vh'>
-              <Quienes id='quienes'/>
+              <SectionParallax img={imageQuienes} imgAlt='Quienes Somos' height='50vh'>
+                <Quienes id='quienes'/>
+              </SectionParallax>
             </Section>
 
             <Section height='100vh'>
@@ -78,11 +86,13 @@ class  Main extends Component {
             </Section>
             
             <Section height='110vh'>
-              Campañas
+              <SectionParallax img={imageCampanias} height='70vh'>
+                <Quienes id='quienes'/>
+              </SectionParallax>
             </Section>
 
             <Section height='100vh'>
-              Voluntarios
+              <Donde img={imageDonde}/>
             </Section>
 
             <Section height='100vh'>

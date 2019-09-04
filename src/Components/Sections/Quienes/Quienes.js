@@ -1,25 +1,46 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
-import Quien from './Quien';
+import styled from 'styled-components';
 
-const Quienes = () => (
-    <div>
-        <Quien />
-        <Parallax
-            blur={0}
-            bgImage={require('../../../Assets/Images/quienes_1.jpg')}
-            bgImageAlt="Quienes Somos"
-            strength={200}
-        >
-            {/* div to set transparent div dimensions where image will fit */}
-            <div style={{ height: '50vh',
-                          width: '100%',
-                          backgroundColor: 'transparent',
-                          position: 'relative',
-                          bottom: '0',
-                          left: '0'}}>
-            </div>
-        </Parallax>
-    </div>
-);
+const Container = styled.div`
+    height: 60vh;
+    width: 100%;
+`
+const ContentContainer = styled.div`
+    height: 80%;
+    left: 50%;
+    position: relative;
+    text-align: center;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+`
+
+const Title = styled.h1`
+    box-sizing: border-box;
+    font-size: 50px;
+    padding: 10px 0;
+    margin: 0;
+`
+    
+const Content = styled.p`
+    font-size: 20px;
+    padding: 20px 0;
+    margin: 0;
+`
+
+const Quienes = () => {
+    return (
+        <Container>
+            <ContentContainer>
+                <Title>
+                    Quiénes Somos
+                </Title>
+                <Content>
+                    Una organizacíon sin fines de Lucro, situada en Mar del Plata. Formada por Jovenes Voluntarios.
+                </Content>
+            </ContentContainer>
+        </Container>
+    )
+}
+
 export default Quienes;
