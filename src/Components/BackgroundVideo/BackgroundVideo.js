@@ -5,12 +5,13 @@ import Video from '../../Assets/Videos/BackgroundVideo1.mp4';
 
 //useful container for making a responsive video
 const VideoContainer = styled.div`
-        position: absolute;
-        top: 170px;
         bottom: 0;
         height: 100vh; 
+        left: 2.5vw;
         overflow: hidden;
-        width: 100vw;
+        position: absolute;
+        top: 170px;
+        width: 95vw;
 
         video {
             /* Make video to at least 100% wide and tall */
@@ -48,7 +49,7 @@ class BackgroundVideo extends Component {
 
     render () {
         return (
-    <div style={{ height: '100vh', width: '100vw'}}>
+            <div style={{ height: '100vh', width: '100vw'}}>
                 <VideoContainer>
                     <video id="background-video" loop autoPlay muted>
                         <source src={this.state.videoURL} type="video/mp4" />
@@ -56,12 +57,12 @@ class BackgroundVideo extends Component {
                         Your browser does not support the video tag.
                     </video>
                 </VideoContainer>
-                <VideoContentContainer>
+                {/* <VideoContentContainer>
                     <Banner 
                         header='Jóvenes Voluntarios'
                         content='Colaboración, Contención, Escucha y Esperanza'
                     />
-                </VideoContentContainer>
+                </VideoContentContainer> */}
             </div>
         )
     }
