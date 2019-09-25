@@ -9,19 +9,19 @@ const BtnContainer = styled.div`
 `
 
 const BtnDonate = styled.button`
-    border-radius: 10px;
-    border: none;
-    height: 50%;
+    border-radius: 20px;
+    border: 3px solid grey;
+    height: 70px;
     font-family: montserrat;
-    font-size: 23px;
+    font-size: 30px;
     margin: 0;
     outline: none;
     padding: 0;
     text-transform: capitalize;
-    width: 50%;
+    width: 250px;
 
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -40,7 +40,7 @@ const Container = styled.div`
     background: #afafaf;
     color: #000000;
     display: flex;
-    height: 110px;
+    height: 200px;
     position: relative;
     width: 100%;
     z-index: 100;
@@ -65,19 +65,20 @@ const LogoWrapper = styled.div`
 `
 
 const Slogan = styled.div`
-    font-size: 23px;
+    font-size: 20px;
     height: 100%;
     margin: 0;
     padding: 0;
     text-shadow: 0 2px 5px rgba(0,0,0,1);
     text-transform: capitalize;
-    width: 40%;
+    width: 20%;
 
-    div {
+    p {
         position: relative;
+        left: 10%;
+        margin: 0;
         top: 50%;
-        left: 75%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
     }
     
     @media screen and (max-width: 880px) {
@@ -88,6 +89,21 @@ const Slogan = styled.div`
     }
 `
 
+const Title = styled.p`
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    
+    span {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        vertical-align: middle;
+    }
+`
+
 const ToolbarContent = (props) => {
     return(
         <Container>
@@ -95,15 +111,14 @@ const ToolbarContent = (props) => {
                 <Logo logo={props.logo} />
             </LogoWrapper>
             <Slogan>
-                <div>
-                    el amor todo lo transforma
-                </div>
+                <p>el amor todo<br/> lo transforma</p>
             </Slogan>
-            <BtnContainer>
-                <BtnDonate>
-                    dona ahora
-                </BtnDonate>
-            </BtnContainer>
+            <Title>
+                <span>adelante</span>
+            </Title>
+            <BtnDonate>
+                dona ahora
+            </BtnDonate>
         </Container>
     )
 }
