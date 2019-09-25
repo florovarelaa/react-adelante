@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 const Header = styled.header`
     background: #0000007A;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: column;
-    height: 50px;
+    height: 70px;
     left: 0;
     margin-left: 10%;
     position: sticky;
@@ -54,7 +54,7 @@ const NavigationContainer = styled.div`
     align-items: center;
     display: flex;
     flex-direction: row;
-    font-size: 1rem;
+    font-size: 1.5rem;
     height: 100%;
     justify-content: space-around;
     width: 100%;

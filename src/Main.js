@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Backdrop from './Components/Backdrop/Backdrop';
 import BackgroundVideo from './Components/BackgroundVideo/BackgroundVideo';
 import LeftPanel from './Components/LeftPanel/LeftPanel';
+import Logo from './Components/Logo/Logo';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
 
@@ -29,7 +30,7 @@ const SectionContainer = styled.div`
 
 class  Main extends Component {
   state = {
-    sections: ['quienes somos', 'que hacemos', 'donde trabajamos', 'nuestras campañas', 'voluntarios', 'como colaborar'],
+    sections: ['quienes somos', 'que hacemos', 'campañas', 'sumate', 'avales'],
     leftPanelOpen: false,
   }
 
