@@ -12,6 +12,8 @@ const Container = styled.div`
 
     a {
         color: black;
+        font-size: 30px;
+        margin: 5px;
     }
 
     @media screen and (max-width: 880px) {
@@ -68,16 +70,23 @@ const ToolbarInfo = () => {
                 <Col40>
                     <ul>
                         <li>
-                            <i className="fa fa-phone"> (0223) 482 8312</i>
+                            <i className="fa fa-phone"> 223 6151515</i>
                         </li>
+                        |
                         <li>
-                            <i className="fa fa-envelope"> info@adelante.com</i>
+                            <i className="fa fa-envelope"> contacto@adelante.com</i>
                         </li>
                     </ul>
                 </Col40>
                 <Col60>
                     <a href='https://www.instagram.com/adelante.mdp/' rel='noopener noreferrer' target='_blank'>
-                        <i className="fa fa-instagram"> Instagram</i>
+                        <i className="fa fa-twitter"></i>
+                    </a>
+                    <a href='https://www.instagram.com/adelante.mdp/' rel='noopener noreferrer' target='_blank'>
+                        <i className="fa fa-facebook"></i>
+                    </a>
+                    <a href='https://www.instagram.com/adelante.mdp/' rel='noopener noreferrer' target='_blank'>
+                        <i className="fa fa-instagram"></i>
                     </a>
                 </Col60>
             </Wrapper>
