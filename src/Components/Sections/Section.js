@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    background: transparent;
-    height: ${props => props.height ? props.height : '100vh'}
+    background: ${props => props.backgroundColor ? props.backgroundColor : 'white'};
+    height: ${props => props.height ? props.height : '100vh'};
+    margin: 5% 0%;
     position: relative;
 
     width: 90%;
@@ -13,7 +14,7 @@ const Container = styled.div`
 
 const Section = props => {
     return(
-        <Container height={props.height}>
+        <Container height={props.height} backgroundColor={props.backgroundColor}>
             {props.children}
         </Container>
     )

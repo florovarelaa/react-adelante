@@ -106,11 +106,11 @@ class  Main extends Component {
               <SectionLeftTextRightImage title='Quienes Somos' text={text} img={imageQuienes}/>
             </Section>
             
-            <Section height='110vh'>
+            <Section height='110vh' backgroundColor='#808080'>
               <SectionLeftVideoRightText title='Titulo' text={text} video={videoSection}/>
             </Section>
             
-            <Section height='110vh'>
+            <Section height='140vh'>
               <SectionParallax img={imageCampanias} height='70vh' width=''>
                 <SectionTopTitleBottomText title='Que Hacemos' text={text}/>
               </SectionParallax>

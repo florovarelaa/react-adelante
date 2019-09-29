@@ -6,7 +6,7 @@ const Container = styled.div`
     width: 100%;
 `
 const ContentContainer = styled.div`
-    height: 80%;
+    height: 90%;
     left: 50%;
     position: relative;
     text-align: center;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    background: #000000;
     display: flex;
     flex-direction: row;
     height: 90%;

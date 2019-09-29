@@ -27,7 +27,8 @@ const SectionParallax = (props) => (
                     backgroundColor: 'transparent',
                     position: 'relative',
                     bottom: '0',
-                    left: '0'}}>
+                    left: '0',
+                    }}>
         </div>
         </Parallax>
     </Container>
