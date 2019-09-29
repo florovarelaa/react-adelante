@@ -11,9 +11,12 @@ import imageCampanias from './Assets/Images/campañas_1.jpg'
 import imageQuienes from './Assets/Images/quienes_1.jpg';
 import imageQue from './Assets/Images/que_1.jpg';
 import imageDonde from './Assets/Images/donde_1.jpg';
+import videoSection from './Assets/Videos/BackgroundVideo1.mp4';
 
 import Section from './Components/Sections/Section';
 import SectionParallax from './Components/SectionParallax/SectionParallax.js';
+import SectionLeftTextRightImage from './Components/Sections/SectionLeftTextRightImage/SectionLeftTextRightImage';
+import SectionLeftVideoRightText from './Components/Sections/SectionLeftVideoRightText/SectionLeftVideoRightText';
 import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
@@ -70,39 +73,51 @@ class  Main extends Component {
           <LeftPanel sections={this.state.sections} show={this.state.leftPanelOpen}/>
           {backdrop}
           <BackgroundVideo />
+          {/* <Logo logo={logo} /> */}
           {/* contains all sections */}
           <SectionContainer>
-            <Section height='110vh'>
+            {/* <Section height='110vh'>
               <SectionParallax img={imageQuienes} imgAlt='Quienes Somos' height='50vh'>
                 <Quienes id='quienes'/>
               </SectionParallax>
-            </Section>
+            </Section> */}
 
-            <Section height='100vh'>
-              <Que img={imageQue}/>
-            </Section>
-
-            <Section height='100vh'>
-              <Donde img={imageDonde}/>
+            <Section height='110vh'>
+              <SectionLeftTextRightImage title='Quienes Somos' text={text} img={imageQuienes}/>
             </Section>
             
             <Section height='110vh'>
-              <SectionParallax img={imageCampanias} height='70vh'>
-                <Quienes id='quienes'/>
+              <SectionLeftVideoRightText title='Titulo' text={text} video={videoSection}/>
+            </Section>
+
+            {/* <Section height='100vh'>
+              <Que img={imageQue}/>
+            </Section> */}
+
+            {/* <Section height='100vh'>
+              <Donde img={imageDonde}/>
+            </Section> */}
+            
+            <Section height='110vh'>
+              <SectionParallax img={imageCampanias} height='70vh' width=''>
+                <Que/>
               </SectionParallax>
             </Section>
 
-            <Section height='100vh'>
+            {/* <Section height='100vh'>
               <Donde img={imageDonde}/>
-            </Section>
+            </Section> */}
 
-            <Section height='100vh'>
+            {/* <Section height='100vh'>
               Como Colaborar
-            </Section>
+            </Section> */}
+
           </SectionContainer>
         </MainContainer>
     );
   }
 }
+
+const text = 'A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. A multi line long text. ';
 
 export default Main;

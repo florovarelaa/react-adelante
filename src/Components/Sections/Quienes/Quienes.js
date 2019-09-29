@@ -33,7 +33,7 @@ const Quienes = () => {
         <Container>
             <ContentContainer>
                 <Title>
-                    Quiénes Somos
+                    Quiénes Somos asdfsdf
                 </Title>
                 <Content>
                     Una organizacíon sin fines de Lucro, situada en Mar del Plata. Formada por Jovenes Voluntarios.
