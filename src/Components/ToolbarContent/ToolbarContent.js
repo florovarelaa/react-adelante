@@ -37,7 +37,7 @@ const BtnDonate = styled.button`
 `;
 
 const Container = styled.div`
-    background: #afafaf;
+    background: #e2e2e2;
     color: #000000;
     display: flex;
     height: 200px;
