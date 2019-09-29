@@ -17,12 +17,14 @@ import Section from './Components/Sections/Section';
 import SectionParallax from './Components/SectionParallax/SectionParallax.js';
 import SectionLeftTextRightImage from './Components/Sections/SectionLeftTextRightImage/SectionLeftTextRightImage';
 import SectionLeftVideoRightText from './Components/Sections/SectionLeftVideoRightText/SectionLeftVideoRightText';
+import SectionTopTitleBottomText from './Components/Sections/SectionTopTitleBottomText/SectionTopTitleBottomText';
+import SectionWithColumns from './Components/Sections/SectionWithColumns/SectionWithColumns';
+
 import styled from 'styled-components';
 import ToolbarInfo from './Components/ToolbarInfo/ToolbarInfo';
 import ToolbarContent from './Components/ToolbarContent/ToolbarContent';
 
 import Que from './Components/Sections/Que/Que';
-import Quienes from './Components/Sections/Quienes/Quienes'
 import Donde from './Components/Sections/Donde/Donde';
 
 const MainContainer = styled.div`
@@ -34,6 +36,28 @@ const SectionContainer = styled.div`
 class  Main extends Component {
   state = {
     sections: ['quienes somos', 'que hacemos', 'campañas', 'sumate', 'avales'],
+    campaigns: [
+          {
+            title: 'Navidad y Reyes',
+            text: 'Algun Texto de Navidad y Reyes',
+            color: '#44AA00',
+          },
+          {
+            title: 'Abrigo',
+            text: 'Algun Texto de Abrigo',
+            color: '#228B22',
+          },
+          {
+            title: 'Vuelta a clases',
+            text: 'Algun Texto de Vuelta a Clases',
+            color: '#008000',
+          },
+          {
+            title: 'Dia del niño',
+            text: 'Algun Texto de Dia del niño',
+            color: '#006400',
+          }
+    ],
     leftPanelOpen: false,
   }
 
@@ -74,13 +98,9 @@ class  Main extends Component {
           {backdrop}
           <BackgroundVideo />
           {/* <Logo logo={logo} /> */}
+
           {/* contains all sections */}
           <SectionContainer>
-            {/* <Section height='110vh'>
-              <SectionParallax img={imageQuienes} imgAlt='Quienes Somos' height='50vh'>
-                <Quienes id='quienes'/>
-              </SectionParallax>
-            </Section> */}
 
             <Section height='110vh'>
               <SectionLeftTextRightImage title='Quienes Somos' text={text} img={imageQuienes}/>
@@ -89,28 +109,16 @@ class  Main extends Component {
             <Section height='110vh'>
               <SectionLeftVideoRightText title='Titulo' text={text} video={videoSection}/>
             </Section>
-
-            {/* <Section height='100vh'>
-              <Que img={imageQue}/>
-            </Section> */}
-
-            {/* <Section height='100vh'>
-              <Donde img={imageDonde}/>
-            </Section> */}
             
             <Section height='110vh'>
               <SectionParallax img={imageCampanias} height='70vh' width=''>
-                <Que/>
+                <SectionTopTitleBottomText title='Que Hacemos' text={text}/>
               </SectionParallax>
             </Section>
 
-            {/* <Section height='100vh'>
-              <Donde img={imageDonde}/>
-            </Section> */}
-
-            {/* <Section height='100vh'>
-              Como Colaborar
-            </Section> */}
+            <Section height='110vh'>
+              <SectionWithColumns items={this.state.campaigns}/>
+            </Section> 
 
           </SectionContainer>
         </MainContainer>

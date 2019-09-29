@@ -28,15 +28,15 @@ const Content = styled.p`
     margin: 0;
 `
 
-const Quienes = () => {
+const Quienes = (props) => {
     return (
         <Container>
             <ContentContainer>
                 <Title>
-                    Quiénes Somos asdfsdf
+                    {props.title}
                 </Title>
                 <Content>
-                    Una organizacíon sin fines de Lucro, situada en Mar del Plata. Formada por Jovenes Voluntarios.
+                    {props.text}
                 </Content>
             </ContentContainer>
         </Container>

@@ -2,8 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    height: ${props => props.height}
+    background: transparent;
+    height: ${props => props.height ? props.height : '100vh'}
     position: relative;
+
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
 `;
 
 const Section = props => {
