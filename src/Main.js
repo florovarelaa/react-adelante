@@ -6,6 +6,7 @@ import LeftPanel from './Components/LeftPanel/LeftPanel';
 import Logo from './Components/Logo/Logo';
 import logo from './logo.jpg';
 import Navbar from './Components/Navbar/Navbar';
+import RoundMedal from './Components/RoundMedal';
 
 import imageCampanias from './Assets/Images/campañas_1.jpg'
 import imageQuienes from './Assets/Images/quienes_1.jpg';
@@ -116,7 +117,8 @@ class  Main extends Component {
               </SectionParallax>
             </Section>
 
-            <Section height='110vh'>
+            <Section height='90vh'>
+              <RoundMedal>Campañas</RoundMedal>
               <SectionWithColumns items={this.state.campaigns}/>
             </Section> 
 

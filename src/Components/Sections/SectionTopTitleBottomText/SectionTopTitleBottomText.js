@@ -12,7 +12,6 @@ const ContentContainer = styled.div`
     text-align: center;
     top: 60%;
     transform: translate(-50%, -50%);
-    width: 50%;
 `
 
 const Title = styled.h1`
